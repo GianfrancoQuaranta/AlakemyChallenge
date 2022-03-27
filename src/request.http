@@ -1,0 +1,62 @@
+// Characters requests
+
+### request all characters
+GET http://localhost:3040/characters HTTP/1.1
+
+### request detail character
+GET http://localhost:3040/characters/1 HTTP/1.1
+
+### create new character
+POST http://localhost:3040/characters HTTP/1.1
+Content-Type: application/json
+
+    {
+        "image": "https://i.postimg.cc/G3q6HFyZ/descarga-1.jpg",
+        "name": "Cenicienta",
+        "age": 25,
+        "weight": 45.32,
+        "story": "Es la famosa cenicienta de Disney"
+    }
+
+### update character registration
+PUT http://localhost:3040/characters/11 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "age": 30
+    }
+
+### delete character registration
+DELETE http://localhost:3040/characters/14 HTTP/1.1
+
+
+###------------------------------------------------------
+
+### get all movies
+GET http://localhost:3040/movies HTTP/1.1
+
+### get movie detail
+GET http://localhost:3040/movies/4 HTTP/1.1
+
+### create new movie
+POST http://localhost:3040/movies/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "image": "https://i.postimg.cc/bY2347zm/descarga-3.jpg",
+    "title": "Ice Age",
+    "release_date": "2004-03-18",
+    "rating": "3.8"
+}
+
+### update movie registration
+PUT http://localhost:3040/movies/8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Ice Age"
+}
+
+### delete movie registration
+DELETE http://localhost:3040/movies/8 HTTP/1.1
+
