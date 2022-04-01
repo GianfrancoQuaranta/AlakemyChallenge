@@ -1,6 +1,6 @@
 let db = require("../database/models");
 
-exports.list = async (req, res) => {
+let list = async (req, res) => {
 
     try {
 
@@ -17,7 +17,7 @@ exports.list = async (req, res) => {
 
 };
 
-exports.detail = async (req, res) => {
+let detail = async (req, res) => {
 
     try {
 
@@ -42,7 +42,7 @@ exports.detail = async (req, res) => {
 
 };
 
-exports.create = async (req, res) => {
+let create = async (req, res) => {
 
     try {
 
@@ -69,7 +69,7 @@ exports.create = async (req, res) => {
 
 };
 
-exports.update = async (req, res) => {     
+let update = async (req, res) => {     
     
     try {
 
@@ -111,7 +111,7 @@ exports.update = async (req, res) => {
 
 };
 
-exports.delete = async (req, res) => {       // Hacer Delete
+let deleted = async (req, res) => {       // Hacer Delete
 
     try {
 
@@ -135,3 +135,5 @@ exports.delete = async (req, res) => {       // Hacer Delete
     };
 
 };
+
+export { list, detail, create, update, deleted}

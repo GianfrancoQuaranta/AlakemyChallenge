@@ -1,23 +1,23 @@
 // express
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
 // require controller
-let movieController = require("../controllers/movieController");
+import { list, detail, create, update, deleted} from "../controllers/movieController";
 
 // get
-router.get("/movies", movieController.list);
-router.get("/movies/:id", movieController.detail);
+router.get("/movies", list);
+router.get("/movies/:id", detail);
 
 
 // post
-router.post("/movies", movieController.create);
+router.post("/movies", create);
 
 // put
-router.put("/movies/:id", movieController.update);
+router.put("/movies/:id", update);
 
 // delete
-router.delete("/movies/:id", movieController.delete);
+router.delete("/movies/:id", deleted);
 
 
-module.exports = router;
+export default router;

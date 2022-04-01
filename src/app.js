@@ -1,14 +1,14 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
 var app = express();
 
-// let indexRouter =  require('./routes/indexRouter');
-// let charactRouter = require("./routes/charactRouter");
-// let movieRouter = require("./routes/movieRouter");
+import indexRouter from './routes/indexRouter';
+import charactRouter from "./routes/charactRouter";
+import movieRouter from "./routes/movieRouter";
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,7 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', charactRouter);
 // app.use('/', movieRouter);
 
-app.use("/", require('./routes/indexRouter'), require("./routes/charactRouter"), require("./routes/movieRouter"));
+app.use("/", indexRouter);
+app.use("/", charactRouter);
+app.use("/", movieRouter);
 
 
 

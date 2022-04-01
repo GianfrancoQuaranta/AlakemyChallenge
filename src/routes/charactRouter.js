@@ -1,22 +1,22 @@
 //
-let express = require("express");
+import express from "express";
 let router = express.Router();
 
 // require controller
-let charactController = require("../controllers/charactController");
+import { list, detail, create, update, deleted} from "../controllers/charactController";
 
 // get
-router.get("/characters", charactController.list);
-router.get("/characters/:id", charactController.detail);
+router.get("/characters", list);
+router.get("/characters/:id", detail);
 
 // post
-router.post("/characters", charactController.create);
+router.post("/characters", create);
 
 // put
-router.put("/characters/:id", charactController.update);
+router.put("/characters/:id", update);
 
 // delet
-router.delete("/characters/:id", charactController.delete);
+router.delete("/characters/:id", deleted);
 
-module.exports = router;
+export default router;
 

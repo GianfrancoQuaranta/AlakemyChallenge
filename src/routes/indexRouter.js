@@ -1,8 +1,8 @@
-var express = require('express');
+import express from 'express';
 var router = express.Router();
-let mainController = require("../controllers/mainController");
+import { index } from "../controllers/mainController";
 
 /* GET home page. */
-router.get('/', mainController.index);
+router.get('/', index);
 
-module.exports = router;
+export default router;
