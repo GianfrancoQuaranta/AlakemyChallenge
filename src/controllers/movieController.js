@@ -1,4 +1,4 @@
-let db = require("../database/models");
+import db from "../database/models";
 
 let list = async (req, res) => {
 

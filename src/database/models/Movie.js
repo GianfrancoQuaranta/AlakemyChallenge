@@ -1,4 +1,4 @@
-module.exports = function (sequelize, dataTypes){
+export default (sequelize, dataTypes) => {
     const cols = {
         id: {
             autoIncrement: true,
